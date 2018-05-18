@@ -16,6 +16,7 @@ public class Tablero {
             tablero[i] = casilla;
         }
         
+        //Tablero comun
         tablero[0].setTipo("VICTORIA");
         tablero[68].setColor("ROJO");
         tablero[68].setTipo("SEGURO");
@@ -42,39 +43,81 @@ public class Tablero {
         tablero[63].setColor("AMARILLO");
         tablero[63].setTipo("SEGURO");
         
-        //Avance rojo a tablero
-        for(int ir=1;ir<=64;ir++){
-            this.mapa.put("ROJO_"+Integer.toString(ir),tablero[ir+4]);
+        //Carceles
+        tablero[69].setColor("ROJO");
+        tablero[69].setTipo("CARCEL");
+        tablero[70].setColor("VERDE");
+        tablero[70].setTipo("CARCEL");
+        tablero[71].setColor("AZUL");
+        tablero[71].setTipo("CARCEL");
+        tablero[72].setColor("AMARILLO");
+        tablero[72].setTipo("CARCEL");
+        
+        //Caminos a la victoria
+        for(int cr = 73; cr <= 79; cr++){
+            tablero[cr].setColor("ROJO");
+            tablero[cr].setTipo("CAMINO_VICTORIA");
         }
         
-        //Avance verde a tablero
-        for(int iv=1;iv<=64;iv++){
-            if(iv+21<=68){
-                this.mapa.put("VERDE_"+Integer.toString(iv),tablero[iv+21]);
+        for(int cv = 80; cv <= 86; cv++){
+            tablero[cv].setColor("VERDE");
+            tablero[cv].setTipo("CAMINO_VICTORIA");
+        }
+        
+        for(int cz = 87; cz <= 93; cz++){
+            tablero[cz].setColor("AZUL");
+            tablero[cz].setTipo("CAMINO_VICTORIA");
+        }
+        
+        for(int cl = 94; cl <= 100; cl++){
+            tablero[cl].setColor("AMARILLO");
+            tablero[cl].setTipo("CAMINO_VICTORIA");
+        }
+        
+        
+        //Carceles
+        mapa.put("ROJO_0",tablero[69]);
+        mapa.put("VERDE_0",tablero[70]);
+        mapa.put("AZUL_0",tablero[71]);
+        mapa.put("AMARILLO_0",tablero[72]);
+        
+        //Avance a tablero para mapeo
+        for(int m=1;m<=64;m++){
+            //Avance rojo
+            mapa.put("ROJO_"+Integer.toString(m),tablero[m+4]);
+            //Avance verde
+            if(m+21<=68){
+                mapa.put("VERDE_"+Integer.toString(m),tablero[m+21]);
             }else{
-                this.mapa.put("VERDE_"+Integer.toString(iv),tablero[iv-47]);
+                mapa.put("VERDE_"+Integer.toString(m),tablero[m-47]);
+            }
+            //Avance azul
+            if(m+38<=68){
+                mapa.put("AZUL_"+Integer.toString(m),tablero[m+38]);
+            }else{
+                mapa.put("AZUL_"+Integer.toString(m),tablero[m-30]);
+            }
+            //Avance amarillo
+            if(m+55<=68){
+                mapa.put("AMARILLO_"+Integer.toString(m),tablero[m+55]);
+            }else{
+                mapa.put("AMARILLO_"+Integer.toString(m),tablero[m-13]);
             }
         }
-        
-        //Avance azul a tablero
-        for(int iz=1;iz<=64;iz++){
-            if(iz+38<=68){
-                this.mapa.put("AZUL_"+Integer.toString(iz),tablero[iz+38]);
-            }else{
-                this.mapa.put("AZUL_"+Integer.toString(iz),tablero[iz-30]);
-            }
+               
+        //Avance caminos de la victoria
+        for(int cv = 65; cv <= 71; cv++){
+            mapa.put("ROJO_"+Integer.toString(cv),tablero[cv+8]);
+            mapa.put("VERDE_"+Integer.toString(cv),tablero[cv+15]);
+            mapa.put("AZUL_"+Integer.toString(cv),tablero[cv+22]);
+            mapa.put("AMARILLO_"+Integer.toString(cv),tablero[cv+29]);
         }
         
-        //Avance amarillo a tablero
-        for(int il=1;il<=64;il++){
-            if(il+55<=68){
-                this.mapa.put("AMARILLO_"+Integer.toString(il),tablero[il+55]);
-            }else{
-                this.mapa.put("AMARILLO_"+Integer.toString(il),tablero[il-13]);
-            }
-        }
-        
-        
+        //Victoria
+        mapa.put("ROJO_72",tablero[0]);
+        mapa.put("VERDE_72",tablero[0]);
+        mapa.put("AZUL_72",tablero[0]);
+        mapa.put("AMARILLO_72",tablero[0]);
     }
     
     

@@ -13,7 +13,8 @@ public class JuegoParquesModificado {
             System.out.println(Integer.toString(i)+"\t"+ tablero.getTablero()[i]);
         }
     
-        System.out.println(tablero.mapearCasillas("AMARILLO", 18));
+        System.out.println(tablero.mapearCasillas("VERDE", 72));
+       
         
         
     }
