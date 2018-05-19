@@ -2,6 +2,7 @@
 package data;
 
 import java.util.HashMap;
+import java.util.Random;
 
 public class Tablero {
     
@@ -118,6 +119,8 @@ public class Tablero {
         mapa.put("VERDE_72",tablero[0]);
         mapa.put("AZUL_72",tablero[0]);
         mapa.put("AMARILLO_72",tablero[0]);
+        
+        mezclarEscalera(tablero);
     }
     
     
@@ -141,6 +144,68 @@ public class Tablero {
     public Casilla mapearCasillas(String color, int avance){
            return this.mapa.get(color+"_"+Integer.toString(avance)); 
     }
-       
     
+    public void mezclarEscalera(Casilla[] tablero){
+        Random aleatorio = new Random();
+        int[] vectorEfectos = new int[8];
+        int escalera=0;
+        do{
+            int casillaAleatoria = aleatorio.nextInt(101);
+            if(tablero[casillaAleatoria].getTipo().equals("REGULAR")){
+                //System.out.println(casillaAleatoria);
+                tablero[casillaAleatoria].setTipo("ESCALERA");
+                int avanza = aleatorio.nextInt(5)+1;
+                tablero[casillaAleatoria].setEfecto(avanza);
+                vectorEfectos[escalera]=casillaAleatoria;
+                escalera++;
+            }
+        }while(escalera<4);
+        
+        int rodadero=0;
+        do{
+            int casillaAleatoria = aleatorio.nextInt(101);
+            if(tablero[casillaAleatoria].getTipo().equals("REGULAR")){
+                //System.out.println(casillaAleatoria);
+                tablero[casillaAleatoria].setTipo("RODADERO");
+                int retrocede = aleatorio.nextInt(5)+1;
+                tablero[casillaAleatoria].setEfecto(-(retrocede));
+                vectorEfectos[rodadero+4]=casillaAleatoria;
+                rodadero++;
+            }
+        }while(rodadero<4);
+        
+        //Esta seccion del codigo modifica los efectos de las casillas
+        //Con el fin de evitar un bug que genera un loop y una ficha puede acabar atrapada
+         for(int bug = 0; bug <8; bug++){
+            for(int fix = bug + 1; fix < 8; fix++){
+                if(vectorEfectos[fix]<vectorEfectos[bug]){
+                    int aux = vectorEfectos[bug];
+                    vectorEfectos[bug] = vectorEfectos[fix];
+                    vectorEfectos[fix]=aux;
+                }
+            }
+        }
+        
+        if(this.tablero[vectorEfectos[7]].getEfecto()+this.tablero[vectorEfectos[0]].getEfecto() == 0){
+               if(this.tablero[vectorEfectos[7]].getEfecto()>0){
+                   if(this.tablero[vectorEfectos[7]].getEfecto()<5){
+                       this.tablero[vectorEfectos[7]].setEfecto(this.tablero[vectorEfectos[7]].getEfecto()+1); 
+                   }else{
+                       this.tablero[vectorEfectos[0]].setEfecto(this.tablero[vectorEfectos[0]].getEfecto()+1); 
+                   }
+               }
+        }
+        
+        for(int bug = 0; bug < 7; bug++){ 
+            if(this.tablero[vectorEfectos[bug]].getEfecto()+this.tablero[vectorEfectos[bug+1]].getEfecto() == 0){
+               if(this.tablero[vectorEfectos[bug]].getEfecto()>0){
+                   if(this.tablero[vectorEfectos[bug]].getEfecto()<5){
+                       this.tablero[vectorEfectos[bug]].setEfecto(this.tablero[vectorEfectos[bug]].getEfecto()+1); 
+                   }else{
+                       this.tablero[vectorEfectos[bug+1]].setEfecto(this.tablero[vectorEfectos[bug+1]].getEfecto()+1); 
+                   }
+               }
+            }           
+        }        
+    }   
 }
