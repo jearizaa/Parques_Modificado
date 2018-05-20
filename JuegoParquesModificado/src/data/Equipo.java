@@ -1,17 +1,13 @@
 
 package data;
 
-public class Equipo {
-    
+public class Equipo extends Jugador {
     private Ficha[] fichas;
     private String color;
     private int turno;
     private boolean habilidadDisponible;
+    private boolean jugador;
     
-    public Equipo(){
-        fichas = new Ficha[4];
-    }    
-
     public Ficha[] getFichas() {
         return fichas;
     }
@@ -43,6 +39,20 @@ public class Equipo {
     public void setHabilidadDisponible(boolean habilidadDisponible) {
         this.habilidadDisponible = habilidadDisponible;
     }
+
+    public boolean isJugador() {
+        return jugador;
+    }
+
+    public void setJugador(boolean jugador) {
+        this.jugador = jugador;
+    }
+    
+    @Override
+    public String toString(){
+        return super.toString()+"Equipo color: "+this.getColor()+"\nTurno numero: "+Integer.toString(this.getTurno())+"\n";
+    }
+    
         
     public void usarPoder(){
     }

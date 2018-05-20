@@ -9,6 +9,14 @@ public class Ficha {
     private boolean encarcelado;
     private boolean protegido;
 
+    public Ficha(String color){
+        this.color = color;
+        this.avance = 0;
+        this.encarcelado = true;
+        this.protegido = true;
+    }
+    
+    
     public String getColor() {
         return color;
     }
