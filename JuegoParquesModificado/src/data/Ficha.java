@@ -10,10 +10,12 @@ public class Ficha {
     private boolean protegido;
 
     public Ficha(String color){
+        Tablero tablero = new Tablero();
         this.color = color;
         this.avance = 0;
         this.encarcelado = true;
         this.protegido = true;
+        this.posicion = tablero.mapearCasillas(this.color, this.avance);
     }
     
     
@@ -57,5 +59,9 @@ public class Ficha {
         this.protegido = protegido;
     }
     
+    @Override
+    public String toString(){
+        return "Equipo: "+this.getColor()+" \nCasillas para ganar: "+Integer.toString(72-this.avance)+" \nPosicion: " + this.getPosicion()+"\n";
+    }
     
 }

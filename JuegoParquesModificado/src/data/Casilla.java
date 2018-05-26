@@ -1,17 +1,19 @@
 
 package data;
 
+import java.util.ArrayList;
+
 public class Casilla {
     private String color;
     private String tipo;
     private int efecto;
+    private ArrayList<Ficha> fichas = new ArrayList<>();
 
     public Casilla(){
         this.tipo = "REGULAR";
         this.color = "";
         this.efecto = 0;
-    }
-    
+    }    
     
     public String getColor() {
         return color;
@@ -36,8 +38,14 @@ public class Casilla {
     public void setEfecto(int efecto) {
         this.efecto = efecto;
     }
-    
-    
+
+    public ArrayList<Ficha> getFichas() {
+        return fichas;
+    }
+
+    public void setFichas(ArrayList<Ficha> fichas) {
+        this.fichas = fichas;
+    }    
     
     @Override
     public String toString(){

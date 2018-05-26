@@ -11,6 +11,7 @@ import data.Rojo;
 import data.Verde;
 import data.Azul;
 import data.Amarillo;
+import data.Ficha;
 
 /**
  *
@@ -20,8 +21,8 @@ public class UI {
     
     public int imprimirBienvenida(){
         Scanner leer = new Scanner(System.in);
-        System.out.println("Bienvenido a un juego de parqués diferente");
-        System.out.println("Por favor ingresa el numero de jugadores 2, 3 ó 4");
+        System.out.println("BIENVENIDO A UN PARQUES DIFERENTE\n");
+        System.out.println("Por favor ingresa el numero de jugadores 2, 3 ó 4.");
         return leer.nextInt();
     }
     
@@ -44,15 +45,21 @@ public class UI {
             System.out.println("Por favor ingresa tu nombre: ");
             String nombre = lector.next();
             do{
-                System.out.println("Por favor ingresa el color deseado: ");
+                System.out.println("Por favor ingresa el color deseado:\n");
+                for(int i=0;i<4;i++){
+                    if(jugadores[i].isJugador() == false){
+                        System.out.printf("\t%d. %s\t",i+1,jugadores[i].getColor());
+                    }
+                }
+                System.out.println("\n");
                 int seleccion = lector.nextInt()-1;
                 if(jugadores[seleccion].isJugador() == false){
-                    System.out.println("El color ha sido seleccionado.");
+                    System.out.printf("El color %s ha sido seleccionado.\n\n",jugadores[seleccion].getColor());
                     jugadores[seleccion].setJugador(true);
                     jugadores[seleccion].setNombre(nombre);               
                     bandera = true;
                 }else{
-                    System.out.println("El color ya ha sido seleccionado previamente.");
+                    System.out.printf("El color %s ya ha sido seleccionado previamente.\n\n",jugadores[seleccion].getColor());
                     bandera = false;
                 }
             }while(bandera == false);
@@ -61,5 +68,11 @@ public class UI {
         return jugadores;
     }
     
+    public void imprimirFichas(Ficha[] fichas){
+        for(int i = 0; i < 4; i++){
+            System.out.printf("FICHA NUMERO %d :\n", i+1);
+            System.out.print(fichas[i]);
+        }
+    }
     
 }
