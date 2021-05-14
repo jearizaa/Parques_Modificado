@@ -72,26 +72,19 @@ This modified parcheesi game consists of 8 classes that are:
 
 <p><b>BOARD:</b> the board is made up of squares, therefore its only attribute is an arrangement of squares specifically 101 (square [101]) and it also has a method that will be in charge of updating the squares, that is, according to the random that is done, will change traps and position advantages (+ update squares (): void).</p>
 
-<p>TURN CONTROL: the turn control will be a class that will not have attributes but will have fundamental methods for the game's function, it is important to clarify that the methods of this class will be executed with the team that has the current turn. first we have the method to verify pairs that as he explains himself. it will check if the thrown dice rolled the same number (+ check Pair (Given, Given): boolean), it also has the method that counts how many pairs in a row it has achieved with the dice, since it is necessary for the rules of the game (+ count Pairs (): void), it has the method that verifies the tiles that follow the game and somewhere other than the goal or the jail (+ check Tokens In Play (): void), it verifies the chips that are in jail (+ verifyCarcelCards (): void), move the counters (+ moveCarrier (Dice, Box, Token): Box), if necessary, take tokens out of jail (+ exit Jail (): void) or send tokens to jail (+ send Jail (Square, Token): Token) and is the one that executes the ability of each team when the player decides (+ use Skill (Team, Token): Equipment).</p>
+<p><b>TURN CONTROL:</b> the turn control will be a class that will not have attributes but will have fundamental methods for the game's function, it is important to clarify that the methods of this class will be executed with the team that has the current turn. first we have the method to verify pairs that as he explains himself. it will check if the thrown dice rolled the same number (+ check Pair (Given, Given): boolean), it also has the method that counts how many pairs in a row it has achieved with the dice, since it is necessary for the rules of the game (+ count Pairs (): void), it has the method that verifies the tiles that follow the game and somewhere other than the goal or the jail (+ check Tokens In Play (): void), it verifies the chips that are in jail (+ verifyCarcelCards (): void), move the counters (+ moveCarrier (Dice, Box, Token): Box), if necessary, take tokens out of jail (+ exit Jail (): void) or send tokens to jail (+ send Jail (Square, Token): Token) and is the one that executes the ability of each team when the player decides (+ use Skill (Team, Token): Equipment).</p>
 
-<p>GAME LOGIC: this layer is related to both the interface and the data, therefore in this layer a board is instantiated, four teams and their respective tiles, a list of tiles that are the ones that have already reached the goal and two dice . the importance of this layer lies in the fact that this is where all the instructions will be given and it will also have three methods, the method that generates the shift (+ generateTurn (): void), the method that the team that carries the shift obtains (+ getCurrentTurnTeam (): Team) (these two so that the shift control class can work and finally, a method that checks if any team has already won the victory (+ victory (Team): void).</p>
+<p><b>GAME LOGIC:</b> this layer is related to both the interface and the data, therefore in this layer a board is instantiated, four teams and their respective tiles, a list of tiles that are the ones that have already reached the goal and two dice . the importance of this layer lies in the fact that this is where all the instructions will be given and it will also have three methods, the method that generates the shift (+ generateTurn (): void), the method that the team that carries the shift obtains (+ getCurrentTurnTeam (): Team) (these two so that the shift control class can work and finally, a method that checks if any team has already won the victory (+ victory (Team): void).</p>
 
-<p>UI: in this interface layer of user, the only class will have the following methods: it will print the board (+ printBoard (): void), the tabs (+ printTiles (): void), the errors in the inputs that may be given (+ printError (): void) and will show the optionsto the player (+ imprimirOpcionesJugador (): void)</p>
+<p><b>UI:</b> in this interface layer of user, the only class will have the following methods: it will print the board (+ printBoard (): void), the tabs (+ printTiles (): void), the errors in the inputs that may be given (+ printError (): void) and will show the optionsto the player (+ imprimirOpcionesJugador (): void)</p>
 
 <img src='./public/classes.png'>
 
-2. Abstracting all entities and relationships between them and design UML diagram
+<h2>UML diagram</h2>
 
 <img src='./public/UML.png'>
 
-
-void)...3. Generate and encapsulating class definitions for each of the entities
-
-is Attach a .zip file with the encapsulated classes. These classes can change go during the course of the project.
-
-4. Design and implementation of the GUI.
-This process could not be implemented in the project since we have had difficulties, collecting information and the way to carry this out.
-Bibliography
+<h2>Bibliography</h2>
 Wikipedia. (2018, 05 14). Parquet. Retrieved from Wikipedia: https://en.wikipecdia.org/wiki/Parqu%C3%A9s
  
 
