@@ -25,32 +25,26 @@ The rules of the game to be implemented are detailed below.
     <li>The board is divided into four regions for the four teams.
         <ul>
             <li>Each region has 24 squares and a jail.</li>
+            <li>7/24 spaces are the way to victory for the exclusive use of the team in the region.</li>
+            <li>2/24 are safe.</li>
+            <li>1/24 is output.</li>
+            <li>14/24 are regular squares.</li>
+            <li>2/14 regular squares have effects. One advance and one delay.</li>
+            <li>The victory zone is common for all four teams.</li>
         </ul>
     </li>
-    <li></li>
+    <li>The player with the highest value on a die starts the game.</li>
+    <li>Play continues in the counterclockwise direction of the player with the first turn.</li>
+    <li>Each player can roll the dice three times to put pawns into play if they don't have any.</li>
+    <li>If the player has at least one pawn in play, he can only roll the dice once.</li>
+    <li>For each doublet with the dice the turn is repeated.</li>
+    <li>Three doublets in a row send a pawn desired by the player to the goal.</li>
+    <li>With a doublet of dice, the player removes two jail pawns to play.</li>
+    <li>With a doublet of 6 or 1 all the jail pawns are moved to play.</li>
+    <li>If a player is in a square and the result of another player's turn is to land on the same square, the player who was first goes to jail.</li>
 </ul>
 
 
-
-
-
-
-
-7/24 spaces are the way to victory for the exclusive use of the team in the region.
-2/24 are safe.
-1/24 is output.
-14/24 are regular squares.
-2/14 regular squares have effects. One early and one late.
-The victory zone is common for all four teams.
-The player with the highest value on a die starts the game.
-Play continues in the counterclockwise direction of the player with the first turn.
-Each player can roll the dice three times to put chips into play if they don't have any.
-If the player has at least one token in play, he can only cast once.
-For each pair with the dice the turn is repeated.
-Three pairs in a row send a token desired by the player to the goal.
-With a pair of dice, he removes two matching jail chips.
-With a pair of 6 or 1 all the matching jail tiles are removed.
-If a player is in a square and the result of another player's turn is to land on the same square, the player who was first goes to jail.
 There are safe effect boxes that do not allow you to send to jail.
 The exit spaces have a certain effect, only the owner of the color can send to jail when there is another player in their exit space.
 The player can use the respective result of the dice for one or two tiles respectively.
