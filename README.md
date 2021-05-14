@@ -1,17 +1,20 @@
-Progress 3 of the Project - Pal Tinto
-Detailed description of the project - Modified Park Game
+<h1>DETAILED DESCRIPTION OF THE PROJECT - MODIFIED PARCHESSI GAME</h1>
 
-Julian Eduardo Ariza Arevalo
-Fabian Stiven Abreo Cubides
-Ivonne Nathalia Uribe Lara
+<h2>AUTHORS: </h2>
+<p>Julian Eduardo Ariza Arevalo</p>
+<p>Fabian Stiven Abreo Cubides</p>
+<p>Ivonne Nathalia Uribe Lara</p>
 
-INTRODUCTION
+<h2>INTRODUCTION</h2>
 
-The Park is a Colombian board game of medium complexity, adapted from the American board game Parchessi that a In turn, it is adapted from the Indian board game Parchisi, the objective is to take the chips of each player to a common goal, by means of the advance determined by the value of a pair of dice. The ladder is a low complexity board game similar to parks, but it has shortcuts and traps that allow a player to advance or delay. The parks modified in this project will be essentially a parks with the shortcuts and traps of the ladder game, in turn, each team has a special ability that will allow them to add more strategic character to the game.
+<p>Adapted from the American board game Parchessi, that in turn, it is adapted from the Indian board game Parchisi, the objective is to take the pawns of each player to a common goal, by means of the advance determined by the value of a pair of dice. </p>
+<p>The ladder is a low complexity board game similar to parchessi, but it has shortcuts and traps that allow a player to advance or delay. The parchessi modified in this project will be essentially a parchessi board with the shortcuts and traps of the ladder game, additionaly, each team has a special ability that will allow them to add more strategic character to the game.</p>
 
-Detailed description: The rules of the game to be implemented are detailed below.
+<h2>Detailed description: </h2>
 
-The essence of the game is a 4-team park.
+The rules of the game to be implemented are detailed below.
+
+The essence of the game is a 4-player board game.
 The board has the following form:
 
 
