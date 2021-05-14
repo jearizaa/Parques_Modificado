@@ -70,8 +70,11 @@ TURN CONTROL: the turn control will be a class that will not have attributes but
 GAME LOGIC: this layer is related to both the interface and the data, therefore in this layer a board is instantiated, four teams and their respective tiles, a list of tiles that are the ones that have already reached the goal and two dice . the importance of this layer lies in the fact that this is where all the instructions will be given and it will also have three methods, the method that generates the shift (+ generateTurn (): void), the method that the team that carries the shift obtains (+ getCurrentTurnTeam (): Team) (these two so that the shift control class can work and finally, a method that checks if any team has already won the victory (+ victory (Team): void).
 UI: in this interface layer of user, the only class will have the following methods: it will print the board (+ printBoard (): void), the tabs (+ printTiles (): void), the errors in the inputs that may be given (+ printError (): void) and will show the optionsto the player (+ imprimirOpcionesJugador ():
 
+<img src='./public/classes.png'>
+
 2. Abstracting all entities and relationships between them and design UML diagram
 
+<img src='./public/UML.png'>
 
 
 void)...3. Generate and encapsulating class definitions for each of the entities
