@@ -42,19 +42,21 @@ The rules of the game to be implemented are detailed below.
     <li>With a doublet of dice, the player removes two jail pawns to play.</li>
     <li>With a doublet of 6 or 1 all the jail pawns are moved to play.</li>
     <li>If a player is in a square and the result of another player's turn is to land on the same square, the player who was first goes to jail.</li>
+    <li>There are safe effect boxes that do not allow you to send to jail.</li>
+    <li>The exit spaces have a certain effect, only the owner of the color can send to jail when there is another player in their exit space.</li>
+    <li>Powers</li>
+    <ul>
+        <li>The player can use the respective result of the dice for one or two tiles respectively.</li>
+        <li>The power of the red token is not to be affected once by recoil squares.</li>
+        <li>The power of the yellow chip is to increase a single time by 1.5 rounded up the value of one space ahead.</li>
+        <li>The power of the blue token is to re-roll a single die once as desired again before making the move.</li>
+        <li>The power of the green token is that it cannot be sent to jail by the next player who can land on its square.</li>
+        <li>Powers can only be used on the respective turns.</li>
+    </ul>  
+    <li>The player who has all the tiles in the goal wins the game.</li>
+    <li>The game ends when there is a winner.</li>
 </ul>
 
-
-There are safe effect boxes that do not allow you to send to jail.
-The exit spaces have a certain effect, only the owner of the color can send to jail when there is another player in their exit space.
-The player can use the respective result of the dice for one or two tiles respectively.
-The power of the red token is not to be affected once by recoil squares.
-The power of the yellow chip is to increase a single time by 1.5 rounded up the value of one space ahead.
-The power of the blue token is to re-roll a single die once as desired again before making the move.
-The power of the green token is that it cannot be sent to jail by the next player who can land on its square.
-Powers can only be used on the respective turns.
-The player who has all the tiles in the goal wins the game.
-The game ends when there is a winner.
 
 CLASS DEFINITION.
 
