@@ -13,18 +13,29 @@
 <h2>Detailed description: </h2>
 
 The rules of the game to be implemented are detailed below.
+<ul>
+    <li>The essence of the game is a 4-player board game.</li>
+    <li>The board has the following form:
+        <img src='https://upload.wikimedia.org/wikipedia/commons/2/2b/Tablero_de_parqu%C3%A9s.svg'>    
+    </li>
+    <li>Each team has four tiles.</li>
+    <li>Each team has a different color.</li>
+    <li>Each color has an ability that can only be used once.</li>
+    <li>The board has random squares that advance or rewind the player's piece.</li>
+    <li>The board is divided into four regions for the four teams.
+        <ul>
+            <li>Each region has 24 squares and a jail.</li>
+        </ul>
+    </li>
+    <li></li>
+</ul>
 
-The essence of the game is a 4-player board game.
-The board has the following form:
 
 
-https://en.wikipedia.org/wiki/Parqu%C3%A9s#/media/File:Tablero_de_parqu%C3%A9s.svg
-Each team has four tiles.
-Each team has a different color.
-Each color has an ability that can only be used once.
-The board has random squares that advance or rewind the player's piece.
-The board is divided into four regions for the four teams.
-Each region has 24 squares and a jail.
+
+
+
+
 7/24 spaces are the way to victory for the exclusive use of the team in the region.
 2/24 are safe.
 1/24 is output.
